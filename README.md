@@ -1,4 +1,4 @@
-# IVR-POS
+# Voice-Based POS System
 ##  How to Run
 ### 1. Install all packages in requirements.txt
 ### 2. Initialize Database
