@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login to IVR-POS</title>
+    <link rel="stylesheet" href="login.css" />
+    <script
+      src="https://kit.fontawesome.com/1032187501.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="signin-container">
+        <h2>Already have an account?</h2>
+        <p>
+          Login to start a new shopping trip, manage your orders or
+          reach out to us about your experience.
+        </p>
+        <input type="button" id="login" class="form-button" value="Login">
+      </div>
+      <div class="signup-container">
+        <h2>Don't have an account?</h2>
+        <p>
+          Create an account to experience the newest Shopping Trend!
+          Your account will give you access to the full suite of services we have on offer.
+        </p>
+        <input type="button" id="signup" class="form-button" value="Create Account">
+      </div>
+      <div class="overlay" id="slide">
+        <div class="form-container signup-form">
+          <form action="">
+            <h3>Create account</h3>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Email" />
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Password" name="passw"/>
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Confirm Password" name="cpassw"/>
+            </div>
+
+            <button class="form-button" onclick="checker(this.form)">
+              Create Account
+            </button>
+          </form>
+        </div>
+
+        <div class="form-container signin-form" style="z-index: 2; opacity: 1;">
+          <form action="" id="loginform">
+            <h3>Login</h3>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Username" name="userid"/>
+            </div>
+            <div class="input-container">
+              <input type="password" placeholder="Password" name = "pswrd"/>
+            </div>
+            <div class="forgot__password-container">
+              <a href="#">Forgot Password? </a>
+            </div>
+
+            <button class="form-button" type="button" onclick="check(this.form)">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="login.js"></script>
+  <script type="text/javascript" src="/eel.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</html>

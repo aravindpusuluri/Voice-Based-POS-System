@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IVR-POS</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+    <link href="style3.css" rel="stylesheet">
+    <link href="style4.css" rel="stylesheet">
+
+</head>
+
+<body onload="initialDisp()">
+    <section class="wellcome_area_assistant clearfix" id="home">
+            <nav class="navbar navbar-expand navbar-light topNavbar">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <i class="material-icons nav-link">menu</i>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item" onclick="generateInvoice()">
+                            <label for="six">
+                            <i class="material-icons nav-link">shopping_basket</i>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        <!-- <div class="basket">
+            <i class="material-icons">shopping_basket</i>
+            </div> -->
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md">
+                    <div class="wellcome-heading">
+                        <h2>IVR-POS</h2>
+                        <p>Making Shopping Easier :)</p>
+                    </div>
+                    <div class="get-start-area">
+                        <form class="form-inline">
+                            <input type="button" id="data" class="form-control email" value="Generate Bill">
+                            <input type="button" class="submit" value="Get QR Code" onclick="hideAll()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wellcome_area clearfix initial" id="displaycart">
+        <nav class="navbar navbar-expand navbar-light topNavbar">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" onclick="generateHome()">
+                        <i class="material-icons nav-link">arrow_back</i>
+                    </li>
+                </ul>
+                <!-- <ul class="navbar-nav">
+                    <li class="nav-item" onclick="generateInvoice()">
+                        <label for="six">
+                        <i class="material-icons nav-link">shopping_basket</i>
+                        </label>
+                    </li>
+                </ul> -->
+            </div>
+        </nav>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md">
+                    <div class="wellcome-heading">
+                        <h2>Your Shopping Cart</h2>
+                        <p>Shop to your Heart's Content!</p>
+                    </div>
+                    <div class="get-start-area" id="test1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="test">
+        </div>
+    </section>
+
+    <section class="wellcome_area clearfix initial" id="inventory">
+        <nav class="navbar navbar-expand navbar-light topNavbar">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <i class="material-icons nav-link">menu</i>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item" onclick="generateInvoice()">
+                        <label for="six">
+                            <i class="material-icons nav-link">shopping_basket</i>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md">
+                    <div class="wellcome-heading">
+                        <h2>Our Stock</h2>
+                        <p>Find all your favourite brands at one place!</p>
+                    </div>
+                    <div class="get-start-area" id="test2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="stock">
+        </div>
+    </section>
+    <!-- Aditi is making changes here Start-->
+    <section class="wellcome_area clearfix initial" id="menu">
+        <nav class="navbar navbar-expand navbar-light topNavbar">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <i class="material-icons nav-link">menu</i>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item" onclick="generateInvoice()">
+                        <label for="six">
+                            <i class="material-icons nav-link">shopping_basket</i>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+          <div class="cards-list">
+
+            <div class="card 4">
+              <div class="card_image card_bg4">  </div>
+              <div class="card_title title-white">
+                <p>Language Preferences</p>
+              </div>
+            </div>
+
+            <div class="card 5">
+              <div class="card_image card_bg5">
+                </div>
+              <div class="card_title title-white">
+                <p>Voice Preferences</p>
+              </div>
+            </div>
+        </section>
+
+
+    <!-- Aditi is making changes here End-->
+
+    <section class="wellcome_area_assistant clearfix initial" id="assistant">
+        <div class="row h-100 ">
+            <div class="container-fluid" id="chat">
+            </div>
+        </div>
+        <div class="googleassist">
+            <span id="bluedot" class="voicedot"></span>
+            <span id="reddot" class="voicedot"></span>
+            <span id="yellowdot" class="voicedot"></span>
+            <span id="greendot" class="voicedot"></span>
+        </div>
+
+    </section>
+    <section class="wellcome_area clearfix initial" id="services">
+        <nav class="navbar navbar-expand navbar-light topNavbar">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <i class="material-icons nav-link">menu</i>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item" onclick="generateInvoice()">
+                        <label for="six">
+                            <i class="material-icons nav-link">shopping_basket</i>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+          <div class="cards-list">
+
+            <div class="card 1" onclick="generateproductReturns()">
+              <div class="card_image card_bg1">  </div>
+              <div class="card_title title-white">
+                <p>Product Returns</p>
+              </div>
+            </div>
+
+              <div class="card 2" onclick="generateAssistant3()">
+              <div class="card_image card_bg2">
+                </div>
+              <div class="card_title title-white">
+                <p>Billing Issues</p>
+              </div>
+            </div>
+
+            <div class="card 3" onclick="generateAssistant2()">
+              <div class="card_image card_bg3">
+              </div>
+              <div class="card_title">
+                <p>Send Feedback</p>
+              </div>
+            </div>
+
+              <div class="card4">
+              <div class="card_title title-black">
+              </div>
+              </div>
+            </div>
+    </section>
+
+    <nav class="menu navbar-nav">
+        <label for="three" onclick="generateAssistant()">
+        <div class="voicebutton small"><i class="material-icons">mic</i></div></label>
+        <input type="radio" name="menu" id="one" checked>
+        <input type="radio" name="menu" id="two">
+        <input type="radio" name="menu" id="three">
+        <input type="radio" name="menu" id="four">
+        <input type="radio" name="menu" id="five">
+        <input type="radio" name="menu" id="six">
+        <div class="list">
+            <div class="link-wrap">
+                <label for="one" onclick="generateHome()">
+                    <i class="material-icons purpleicon">home</i>
+                    <span>Home</span>
+                </label>
+                <label for="two" onclick="generateServices()">
+                    <i class="material-icons purpleicon">sentiment_very_satisfied</i>
+                    <span>Customer Corner</span>
+                </label>
+                <label></label>
+                <label for="four" onclick="generateInventory()">
+                    <i class="material-icons purpleicon">list_alt</i>
+                    <span>Inventory</span>
+                </label>
+                <label for="five" onclick="generateMenu()">
+                    <i class="material-icons purpleicon">menu</i>
+                    <span>Menu</span>
+                </label>
+
+            </div>
+        </div>
+    </nav>
+</body>
+<script type="text/javascript" src="/eel.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>
